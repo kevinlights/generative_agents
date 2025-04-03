@@ -33,6 +33,31 @@ debug = True
 ```
 Replace `<Your OpenAI API>` with your OpenAI API key, and `<name>` with your name.
  
+
+### Run with local Ollama models
+
+```python
+# Copy and paste your OpenAI API Key
+openai_api_key = "<Your OpenAI API>"
+openai_base_url = "http://127.0.0.1:11434/v1"
+model = "qwen2.5:3b"
+# Put your name
+key_owner = "<Name>"
+
+maze_assets_loc = "../../environment/frontend_server/static_dirs/assets"
+env_matrix = f"{maze_assets_loc}/the_ville/matrix"
+env_visuals = f"{maze_assets_loc}/the_ville/visuals"
+
+fs_storage = "../../environment/frontend_server/storage"
+fs_temp_storage = "../../environment/frontend_server/temp_storage"
+
+collision_block_id = "32125"
+
+# Verbose 
+debug = True
+```
+
+
 ### Step 2. Install requirements.txt
 Install everything listed in the `requirements.txt` file (I strongly recommend first setting up a virtualenv as usual). A note on Python version: we tested our environment on Python 3.9.12. 
 
